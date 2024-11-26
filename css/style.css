@@ -20,7 +20,7 @@
 }
 @font-face {
     font-family: iCielRomantically-regular;
-    src: url(../font/iCielRomantically-Regular.otf);
+    src: url(../font/UTMEdwardianKT.ttf);
 }
   
 :root {
@@ -434,7 +434,7 @@ body {
     color: #ebc6b8;
     /* color: var(--second-color); */
     font-family: var(--iCielRomantically-regular);
-    font-size: 35px;
+    font-size: 55px;
 }
 .banner-date {
     color: var(--second-color);
@@ -522,7 +522,7 @@ body {
 .about-data .bride_name, .about-data .groom_name {
     /* font-family: var(--script-font); */
     font-family: var(--iCielRomantically-regular);
-    font-size: 35px;
+    font-size: 55px;
     color: #d66f68;
 }
 /* END ABOUT */
