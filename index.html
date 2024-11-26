@@ -350,6 +350,107 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 <!-- END INVITATION -->
 <!-- DRESS CODE -->
 	<!-- END DRESS CODE -->	
+<!-- LỜI CHÚC -->
+<!-- TIN NHẮN -->
+<section id="message" class="section-message uk-background-cover uk-section" style="background-image:url(img/6.jpg); display:block">
+	<div class="uk-position-cover uk-overlay uk-overlay-primary"> </div>
+      <div class="message-container container uk-position-relative uk-position-z-index">
+        <h2 class="section-title uk-light" style="color:white">
+          Gửi lời chúc đến cặp đôi        </h2>
+        <div class="list_message">
+          <!-- <div class="message-item" data-aos="fade-up" data-aos-duration="2000">
+            <i class='bx bxs-quote-alt-left'></i>
+            <h3 class="user_message">Phương Nguyễn</h3>
+            <p class="message_body">Chúc bạn thân của tao lấy một chồng, đẻ hai con đủ nếp đủ tẻ, sống ở nhà ba tầng,
+              mua xe 4 bánh nhé. Phải thật hạnh phúc mày nhé! Hi hi.</p>
+          </div> -->
+        </div>
+       
+        <div class="uk-padding-small uk-border-rounded blur-bg" style="border:1px solid white">
+			
+          <h3 class="form-title" style="color:white">Gửi lời chúc</h3>
+          <form action="" id="messageForm" method="POST">
+		
+          <input type='hidden' id="postId" value='1957' />
+            <div class="input-group uk-margin-top" style="color:white">
+              <label for="">
+                Tên của bạn              </label>
+              <input style="border:1px solid white" id="m_name" type="text" class="input blur-bg" value="" required />
+            </div>
+            <div class="input-group uk-margin-top">
+              <label for="" style="color:white">
+                Lời nhắn gửi              </label>
+              <textarea style="border:1px solid white; color:white" id="m_text" class="input-text text-white blur-bg" name="" cols="30" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary send_message uk-margin-top" style="color:white">Gửi lời chúc</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- END TIN NHẮN -->
+<script>
+
+</script>
+<!-- END LỜI CHÚC -->
+<!-- FORM XÁC NHẬN -->
+<!-- FROM XÁC NHẬN -->
+<section id="form" class="form" style="display:block" >
+  <div class="container">
+    <form action="" method="post" id="form-wedding" style="background-image:url(https://static.vecteezy.com/system/resources/previews/016/407/415/original/paper-cut-sweet-pink-envelope-and-heart-with-copy-space-for-design-valentine-s-day-or-love-day-background-concept-send-a-letter-to-a-lover-couple-free-vector.jpg)">
+      <h2 class="section-title">Xác nhận tham dự</h2>
+      <p class="sub-title">Hãy cho chúng tôi biết bạn sẽ đến tham dự nhé!</p>
+      <div class="form-container">
+              <div class="group-radio">
+        
+          <label class="radio-container">THÀNH HÔN NHÀ TRAI             <span class="tooltip"> <p>Thôn Khách Nhi, Vĩnh Thịnh, Vĩnh Tường, Vĩnh Phúc.</p>
+ </span>
+            <input type="radio" name="fav_language" id="nha_trai" value="NHÀ TRAI " >
+            <span class="checkmark"></span>
+          </label>
+          
+          <label class="radio-container">THÀNH HÔN NHÀ GÁI             <span class="tooltip"> <p>Nhà văn hoá đội 7, thôn Cao Xá, Cao Đại, Vĩnh Tường, Vĩnh Phúc.</p>
+ </span>
+            <input type="radio" name="fav_language" id="nha_trai" value="NHÀ GÁI " >
+            <span class="checkmark"></span>
+          </label>
+                  </div>
+                <div class="group-input">
+          <label>Tên Khách Mời</label>
+          <input type="text" class="input" id="f_name" required="" placeholder="Tên Khách Mời">
+        </div>
+        
+        <div class="group-input">
+          <p class="group-title"></p>
+          <div class="group-select">
+            <select name="" id="wedding-select">
+              <option value="Có">Có tôi sẽ đến </option>
+              <option value="Không">Xin Lỗi tôi không tham dự được ! </option>
+            </select>
+            <i class='bx bx-chevron-down'></i>
+          </div>
+          <div class="group-select">
+            <select name="" id="num_user">
+              <option value="1 Người">1 Người </option>
+              <option value="2 Người">2 Người</option>
+              <option value="3 Người">3 Người</option>
+            </select>
+            <i class='bx bx-chevron-down'></i>
+        </div>
+        </div>
+        <div class="group-input">
+          <label></label>
+          <textarea name="" id="f_text" cols="30" rows="4" ></textarea>
+        </div>
+        <div class="message-form">
+          
+        </div>
+        <div class="group-input">
+          <button type="submit" class="wedding-submit">Xác nhận</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
 
 <script>
   //XỬ LÝ FORM
@@ -357,23 +458,21 @@ $(document).ready(function(){
   $('.message-form').fadeOut(300)
   $('#form').on('submit', function(e){
       e.preventDefault();
-      f_userName = "Tuấn Tú -Kiều Trang"
       f_check = $('input[type="radio"]:checked').val()
       f_name = $(this).find('#f_name').val()
       f_numUser = $('#num_user').find('option:selected').val()
       f_select = $('#wedding-select').find('option:selected').val()
       f_text = $(this).find('#f_text').val()
       var form_data = {
-          'entry.737056527': f_userName,
-          'entry.642873731': f_check,
-          'entry.1699210899': f_name,
-          'entry.369695229': f_numUser,
-          'entry.1528762541': f_select,
-          'entry.1679764871': f_text,
+          'entry.1065046570': f_name,//TEN
+          'entry.1167554530': f_check,//DIA DIEN
+          'entry.719840695': f_numUser,//SO LUONG
+          'entry.1099821514': f_select,//XAC NHAN
+          'entry.839337160': f_text,//LOI CHUC
       }
      $('.wedding-submit[type="submit"]').text('Đang gửi ...')
      $.ajax({
-      url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdD9g3WsFXklx1iJ2WTwnaKq7qXDh8fLcOetjSV8GMatzoWaA/formResponse",
+      url: "https://docs.google.com/forms/d/e/1FAIpQLSdQw-NX8s9m-6hbwjPG4fit6W40JDwalkBfoPYSswgaF8fKNw/formResponse",
       type: "POST",
       data : form_data,
       dataType: "xml",
@@ -385,7 +484,35 @@ $(document).ready(function(){
               $('button[type="submit"]').removeClass('btn_primary')
               $('button[type="submit"]').attr('disabled','true')
               $('button[type="submit"]').text('Đã xác nhận')
-              $('.message-form').fadeIn(300)
+              $('.message-form').fadeIn(300);
+                window.location.reload();
+          },
+          200: function() {
+              alert('200')
+          }
+      }
+      })
+  })
+
+  $('#messageForm').on('submit', function(e){
+      e.preventDefault();
+      m_name = $(this).find('#m_name').val()
+      m_text = $(this).find('#m_text').val()
+      var form_data = {
+          'entry.1065046570': m_name,//TEN
+          'entry.839337160': m_text,//LOI CHUC
+      }
+     $('.send_message[type="submit"]').text('Đang gửi ...')
+     $.ajax({
+      url: "https://docs.google.com/forms/d/e/1FAIpQLSd8q8s-rI7oFqgXaua48bXS5c-MvAkvIaCMjt1MR1B0V7Q7Bg/formResponse",
+      type: "POST",
+      data : form_data,
+      dataType: "xml",
+      statusCode: {
+          0: function() {
+            let mess_item = '<div class="message-item blur-bg"> <h3 class="user_message">'+m_name+'</h3> <p class="message_body">'+m_text+'</p> </div>'
+            alert("Cảm ơn những lời chúc ngọt ngào của bạn!");
+            window.location.reload();
           },
           200: function() {
               alert('200')
@@ -449,6 +576,26 @@ $(document).ready(function(){
  $(':root').css('--primary-color', '');
  $(':root').css('--secondary-color', '');
  $(':root').css('--bg', '');
+ 
+ const url = "https://script.google.com/macros/s/AKfycbyjYaip2OrA6uTLjdalwhd0Ys0QL0ui6WAjvhFQVWDiD0ZNJsx4W0Tb7ZNZSRYMnweFyA/exec";
+
+async function fetchData() {
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    const rs = data.slice(1);
+    let mess_item  = '';
+    rs.forEach(function(item, index) {
+     mess_item += '<div class="message-item blur-bg"> <h3 class="user_message">'+item[1]+'</h3> <p class="message_body">'+item[2]+'</p> </div>'
+    });
+    $('.list_message').html(mess_item)
+  } catch (error) {
+    console.error("Error:", error);
+  }
+}
+
+fetchData();
+ 
 </script>
 <!-- AUDIO -->
 <audio src="https://hchiwedding.com/wp-content/uploads/2024/10/BeautifulInWhite-ShaneFilan-524801-13.mp3" controls autoplay id="audio">
