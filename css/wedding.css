@@ -652,7 +652,7 @@ select {
 
     gap: 30px;
 
-    margin-top: 40px;
+    /* margin-top: 40px; */
 
     grid-template-columns: repeat(auto-fit, 320px);
 
@@ -667,6 +667,7 @@ select {
     padding: 20px;
 
     border-radius: 12px;
+    font-size: 18px;
 
     display: flex;
 

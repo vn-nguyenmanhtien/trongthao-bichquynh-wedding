@@ -18,7 +18,8 @@
     --max-width : 1024px;
     /* color */
     --primary-color : #15293A;
-    --bg : #ecf7ff;
+    --bg : #ecdfce;
+    /* --bg : #ecf7ff; */
     --second-color : #D7AB71;
     --text-white :#fff ; 
     --overlay : black;
